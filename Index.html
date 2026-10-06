@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Annamalai Residency & Restaurant | Viluppuram</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FAF6EE',
+                            100: '#F5ECDA',
+                            200: '#E9D6B3',
+                            300: '#DCB28B',
+                            400: '#D4AF37',
+                            500: '#B89025',
+                            600: '#94701B',
+                        },
+                        charcoal: {
+                            800: '#222225',
+                            900: '#1A1A1A',
+                            950: '#111112'
+                        },
+                        cream: '#FAF8F5'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #F5ECDA 0%, #D4AF37 50%, #B89025 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal-900 font-sans antialiased selection:bg-gold-400 selection:text-white">
+
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-charcoal-900/95 text-white backdrop-blur-md border-b border-gold-400/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-600 to-gold-400 flex items-center justify-center text-charcoal-950 font-serif font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    A
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-lg sm:text-xl tracking-wide text-gold-400 leading-tight">ANNAMALAI</span>
+                    <span class="text-[10px] tracking-widest text-gray-300 uppercase font-semibold">Residency & Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-gold-400 transition-colors">About Us</a>
+                <a href="#menu" class="hover:text-gold-400 transition-colors">Dining & Menu</a>
+                <a href="#gallery" class="hover:text-gold-400 transition-colors">Gallery</a>
+                <a href="#location" class="hover:text-gold-400 transition-colors">Location</a>
+                <a href="#booking" class="bg-gradient-to-r from-gold-500 to-gold-400 hover:from-gold-600 hover:to-gold-500 text-charcoal-950 font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-gold-400/20 transition-all transform hover:-translate-y-0.5">
+                    Book Stay / Table
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-gold-400 p-2 focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal-900 border-b border-gold-400/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-charcoal-800">About Us</a>
+            <a href="#menu" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-charcoal-800">Dining & Menu</a>
+            <a href="#gallery" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-charcoal-800">Gallery</a>
+            <a href="#location" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-charcoal-800">Location & Contact</a>
+            <a href="#booking" class="mobile-link block w-full text-center bg-gold-400 text-charcoal-950 font-semibold px-4 py-3 rounded-xl mt-2">Book Stay or Table</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-charcoal-950">
+        <!-- Hero Background Image Overlay -->
+        <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1920" alt="Hotel Exterior" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Gradient Shades -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/70 to-transparent"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            <!-- Google Review Badge -->
+            <div class="inline-flex items-center gap-2 bg-charcoal-900/80 border border-gold-400/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-md shadow-lg">
+                <span class="text-gold-400 text-sm font-bold flex items-center gap-1">
+                    <i class="fa-solid fa-star text-amber-400"></i> 3.7 / 5.0
+                </span>
+                <span class="text-xs text-gray-300 border-l border-gray-600 pl-2">Google Reviews</span>
+                <span class="text-xs text-gold-300 font-medium hidden sm:inline">• Viluppuram</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-extrabold text-white tracking-tight leading-tight mb-6">
+                Welcome to <br class="hidden sm:inline">
+                <span class="text-gradient">Hotel Annamalai Residency</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 mb-8 font-light leading-relaxed">
+                Experience comfort & authentic culinary excellence on Chennai Bypass Road. Your premier destination for luxury lodging and delicious multi-cuisine dining in Viluppuram.
+            </p>
+
+            <!-- Call To Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-400 hover:bg-gold-500 text-charcoal-950 font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-gold-400/30 transform hover:-translate-y-1">
+                    <i class="fa-regular fa-calendar-check text-lg"></i>
+                    <span>Book Your Stay</span>
+                </a>
+                <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-charcoal-900/90 border border-gold-400/40 text-gold-400 hover:bg-gold-400 hover:text-charcoal-950 font-semibold px-8 py-4 rounded-xl transition-all backdrop-blur-md">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Explore Restaurant Menu</span>
+                </a>
+                <a href="tel:+919443441161" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-700/80 hover:bg-emerald-600 text-white font-semibold px-6 py-4 rounded-xl transition-all">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 94434 41161</span>
+                </a>
+            </div>
+
+            <!-- Quick Info Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8 border-t border-gray-800/80 text-left">
+                <div class="flex items-center gap-3 bg-charcoal-900/50 p-3 rounded-xl border border-gold-400/10">
+                    <div class="text-gold-400 text-2xl"><i class="fa-solid fa-train"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-400">Railway Station</div>
+                        <div class="text-sm font-semibold text-white">1.9 km Away</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-charcoal-900/50 p-3 rounded-xl border border-gold-400/10">
+                    <div class="text-gold-400 text-2xl"><i class="fa-solid fa-bowl-rice"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-400">Restaurant</div>
+                        <div class="text-sm font-semibold text-white">Multi-Cuisine</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-charcoal-900/50 p-3 rounded-xl border border-gold-400/10">
+                    <div class="text-gold-400 text-2xl"><i class="fa-solid fa-square-parking"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-400">Parking</div>
+                        <div class="text-sm font-semibold text-white">Ample Space</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-charcoal-900/50 p-3 rounded-xl border border-gold-400/10">
+                    <div class="text-gold-400 text-2xl"><i class="fa-solid fa-wifi"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-400">Services</div>
+                        <div class="text-sm font-semibold text-white">AC / Non-AC</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-600 uppercase font-bold text-xs tracking-widest bg-gold-100 px-3 py-1 rounded-full border border-gold-200">Hospitality & Dining</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal-900 mt-3 mb-4">Why Choose Annamalai Residency?</h2>
+                <div class="w-20 h-1 bg-gold-400 mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    Conveniently located on Chennai Bypass Road in Viluppuram, right near ES Engineering College. We blend traditional South Indian hospitality with modern comfort and flavorful dining.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Highlight 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gold-400/20 group">
+                    <div class="w-14 h-14 bg-gold-50 rounded-xl flex items-center justify-center text-gold-600 text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-charcoal-950 transition-colors">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-charcoal-900 mb-2">Comfortable Accommodations</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Spacious AC & Non-AC rooms designed for short halts and extended trips with clean amenities, room service, and peaceful environment.
+                    </p>
+                </div>
+
+                <!-- Highlight 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gold-400/20 group">
+                    <div class="w-14 h-14 bg-gold-50 rounded-xl flex items-center justify-center text-gold-600 text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-charcoal-950 transition-colors">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-charcoal-900 mb-2">Multi-Cuisine Delight</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Savor authentic South Indian dosas, special Biryanis, rich North Indian curries, and Indo-Chinese specialties prepared by experienced chefs.
+                    </p>
+                </div>
+
+                <!-- Highlight 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gold-400/20 group">
+                    <div class="w-14 h-14 bg-gold-50 rounded-xl flex items-center justify-center text-gold-600 text-2xl mb-6 group-hover:bg-gold-400 group-hover:text-charcoal-950 transition-colors">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-serif text-charcoal-900 mb-2">Prime Bypass Location</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Perfectly situated ~1.9 km from Villupuram Junction Railway Station, offering effortless accessibility for travelers and highway commuters.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-charcoal-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 uppercase font-bold text-xs tracking-widest bg-charcoal-800 px-3 py-1 rounded-full border border-gold-400/20">Delicious Offerings</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3 mb-4">Restaurant Menu Specialties</h2>
+                <div class="w-20 h-1 bg-gold-400 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="max-w-2xl mx-auto mb-10 flex flex-col sm:flex-row gap-4">
+                <div class="relative flex-1">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="menu-search" placeholder="Search dishes (e.g., Biryani, Dosa, Paneer)..." 
+                           class="w-full pl-11 pr-4 py-3 bg-charcoal-800 border border-gold-400/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-gold-400 text-sm">
+                </div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="menu-tabs">
+                <button data-category="all" class="menu-tab-btn active bg-gold-400 text-charcoal-950 font-semibold px-5 py-2.5 rounded-full text-sm transition-all">All Items</button>
+                <button data-category="south" class="menu-tab-btn bg-charcoal-800 text-gray-300 hover:text-gold-400 px-5 py-2.5 rounded-full text-sm border border-gray-700 transition-all">South Indian</button>
+                <button data-category="north" class="menu-tab-btn bg-charcoal-800 text-gray-300 hover:text-gold-400 px-5 py-2.5 rounded-full text-sm border border-gray-700 transition-all">North Indian</button>
+                <button data-category="chinese" class="menu-tab-btn bg-charcoal-800 text-gray-300 hover:text-gold-400 px-5 py-2.5 rounded-full text-sm border border-gray-700 transition-all">Chinese & Fried Rice</button>
+                <button data-category="beverages" class="menu-tab-btn bg-charcoal-800 text-gray-300 hover:text-gold-400 px-5 py-2.5 rounded-full text-sm border border-gray-700 transition-all">Snacks & Beverages</button>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamic Items Inserted via JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-600 uppercase font-bold text-xs tracking-widest bg-gold-100 px-3 py-1 rounded-full border border-gold-200">Visual Experience</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal-900 mt-3 mb-4">Hotel & Dining Gallery</h2>
+                <div class="w-20 h-1 bg-gold-400 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Card 1: Exterior -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-charcoal-900 aspect-video sm:aspect-square">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800" alt="Hotel Exterior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase font-bold tracking-wider">Exterior</span>
+                            <h3 class="text-lg font-serif font-bold text-white">Hotel Annamalai Residency</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 2: Dining Hall -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-charcoal-900 aspect-video sm:aspect-square">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Dining Restaurant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase font-bold tracking-wider">Restaurant</span>
+                            <h3 class="text-lg font-serif font-bold text-white">AC Dining Hall</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 3: Podi Dosa Dish -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-charcoal-900 aspect-video sm:aspect-square">
+                    <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&q=80&w=800" alt="Special Podi Dosa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase font-bold tracking-wider">South Indian</span>
+                            <h3 class="text-lg font-serif font-bold text-white">Signature Podi Dosa & Chutneys</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 4: Veg Fried Rice -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-charcoal-900 aspect-video sm:aspect-square">
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&q=80&w=800" alt="Veg Fried Rice" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase font-bold tracking-wider">Chinese Cuisine</span>
+                            <h3 class="text-lg font-serif font-bold text-white">Special Vegetable Fried Rice</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 5: Kizhi Parotta / Leaf Parcel -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-charcoal-900 aspect-video sm:aspect-square">
+                    <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&q=80&w=800" alt="Banana Leaf Meals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase font-bold tracking-wider">Traditional</span>
+                            <h3 class="text-lg font-serif font-bold text-white">Banana Leaf Meals & Parcel</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Card 6: Deluxe Room -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md bg-charcoal-900 aspect-video sm:aspect-square">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=800" alt="Deluxe Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-gold-400 uppercase font-bold tracking-wider">Lodging</span>
+                            <h3 class="text-lg font-serif font-bold text-white">Comfortable AC Rooms</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-20 bg-charcoal-950 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-charcoal-900 rounded-3xl p-6 sm:p-10 border border-gold-400/30 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-8">
+                    <span class="text-gold-400 uppercase font-bold text-xs tracking-widest">Instant Reservation Inquiry</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold mt-2">Book Room or Reserve Table</h2>
+                    <p class="text-gray-400 text-sm mt-2">Fill details below to quickly send your inquiry directly via WhatsApp or Call.</p>
+                </div>
+
+                <form id="booking-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Full Name</label>
+                            <input type="text" id="book-name" required placeholder="John Doe" 
+                                   class="w-full bg-charcoal-800 border border-gray-700 focus:border-gold-400 rounded-xl px-4 py-3 text-white focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="book-phone" required placeholder="+91 98765 43210" 
+                                   class="w-full bg-charcoal-800 border border-gray-700 focus:border-gold-400 rounded-xl px-4 py-3 text-white focus:outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Booking Type</label>
+                            <select id="book-type" class="w-full bg-charcoal-800 border border-gray-700 focus:border-gold-400 rounded-xl px-4 py-3 text-white focus:outline-none text-sm">
+                                <option value="Room Stay">Room Accommodation</option>
+                                <option value="Restaurant Table">Dining Table Reservation</option>
+                                <option value="Catering / Bulk Order">Catering / Bulk Food</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Date</label>
+                            <input type="date" id="book-date" required class="w-full bg-charcoal-800 border border-gray-700 focus:border-gold-400 rounded-xl px-4 py-3 text-white focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Guests / Rooms</label>
+                            <input type="number" id="book-count" min="1" value="2" required class="w-full bg-charcoal-800 border border-gray-700 focus:border-gold-400 rounded-xl px-4 py-3 text-white focus:outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Special Requests / Notes</label>
+                        <textarea id="book-notes" rows="3" placeholder="AC / Non-AC room preference, special dietary requirements..." class="w-full bg-charcoal-800 border border-gray-700 focus:border-gold-400 rounded-xl px-4 py-3 text-white focus:outline-none text-sm"></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <button type="submit" class="w-full bg-gold-400 hover:bg-gold-500 text-charcoal-950 font-bold py-4 rounded-xl transition-all shadow-lg text-sm uppercase tracking-wider">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Send Inquiry on WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Location & Contact info -->
+                <div>
+                    <span class="text-gold-600 uppercase font-bold text-xs tracking-widest bg-gold-100 px-3 py-1 rounded-full border border-gold-200">Easy Accessibility</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-charcoal-900 mt-3 mb-6">Find & Contact Us</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Situated right on the main Chennai Bypass Road in Viluppuram, near ES Engineering College. Easily reachable from major highway routes and railway stations.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-400/20 text-gold-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal-900">Address</h4>
+                                <p class="text-gray-600 text-sm mt-0.5">Chennai Bypass Road, near ES Engineering College, Viluppuram, Tamil Nadu 605602</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-400/20 text-gold-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal-900">Phone & WhatsApp</h4>
+                                <a href="tel:+919443441161" class="text-gold-600 hover:underline text-sm font-semibold block mt-0.5">+91 94434 41161</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gold-400/20 text-gold-600 rounded-xl flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-train"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-charcoal-900">Railway Proximity</h4>
+                                <p class="text-gray-600 text-sm mt-0.5">~1.9 km from Villupuram Junction Railway Station</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Location Box Card -->
+                <div class="bg-charcoal-900 text-white rounded-3xl p-8 border border-gold-400/30 shadow-xl relative">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-gold-400">Hotel Annamalai Residency</h3>
+                            <p class="text-xs text-gray-400">Viluppuram, Tamil Nadu</p>
+                        </div>
+                        <div class="bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full text-xs font-bold border border-amber-400/30">
+                            ⭐ 3.7 / 5.0
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="p-4 bg-charcoal-800 rounded-xl flex items-center justify-between">
+                            <span><i class="fa-regular fa-clock text-gold-400 mr-2"></i> Restaurant Hours</span>
+                            <span class="font-semibold text-white">7:00 AM - 10:30 PM</span>
+                        </div>
+                        <div class="p-4 bg-charcoal-800 rounded-xl flex items-center justify-between">
+                            <span><i class="fa-solid fa-door-open text-gold-400 mr-2"></i> Room Reception</span>
+                            <span class="font-semibold text-white">24 / 7 Active</span>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Hotel+Annamalai+Residency+Viluppuram" target="_blank" class="mt-8 w-full bg-gold-400 hover:bg-gold-500 text-charcoal-950 font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-solid fa-diamond-turn-right"></i>
+                        <span>Open in Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-charcoal-950 text-gray-400 text-sm py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-gold-400 text-charcoal-950 flex items-center justify-center font-serif font-bold">A</div>
+                    <span class="text-white font-serif font-bold text-base">Hotel Annamalai Residency & Restaurant</span>
+                </div>
+                <div class="text-xs text-center md:text-right text-gray-500">
+                    &copy; 2026 Hotel Annamalai Residency. All rights reserved. Chennai Bypass Road, Viluppuram.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Dataset
+        const menuItems = [
+            { name: "Special Podi Dosa", category: "south", price: "₹95", desc: "Crispy rice crepe sprinkled with spicy aromatic gun powder ghee.", tag: "Popular" },
+            { name: "South Indian Special Meals", category: "south", price: "₹140", desc: "Served on banana leaf with Rice, Sambar, Rasam, Kara Kulambu, Kootu, Poriyal & Appalam.", tag: "Bestseller" },
+            { name: "Mini Tiffin Combo", category: "south", price: "₹110", desc: "Idli, Mini Dosa, Poori, Vada & Sweet with triple chutney chutneys & sambar." },
+            { name: "Veg Kizhi Parotta", category: "south", price: "₹130", desc: "Flaky parottas steamed inside banana leaf with rich spiced curry sauce." },
+            { name: "Paneer Butter Masala", category: "north", price: "₹180", desc: "Cottage cheese cubes simmered in a creamy tomato gravy.", tag: "Chef's Special" },
+            { name: "Butter Naan & Roti", category: "north", price: "₹45", desc: "Oven-baked fluffy Indian bread brushed with melted ghee." },
+            { name: "Dal Tadka", category: "north", price: "₹140", desc: "Yellow lentils tempered with garlic, cumin, and dried red chillies." },
+            { name: "Special Veg Biryani", category: "chinese", price: "₹150", desc: "Fragrant basmati rice cooked with fresh vegetables, spices, and herbs.", tag: "Recommended" },
+            { name: "Veg Fried Rice", category: "chinese", price: "₹130", desc: "Wok-tossed long-grain basmati rice with cauliflower, carrots, and spring onion." },
+            { name: "Gobi Manchurian", category: "chinese", price: "₹145", desc: "Crispy cauliflower florets tossed in tangy Chinese soy chilli glaze." },
+            { name: "Filter Coffee", category: "beverages", price: "₹30", desc: "Authentic South Indian aromatic degree filter coffee." },
+            { name: "Fresh Fruit Juice", category: "beverages", price: "₹60", desc: "Fresh seasonal fruit juices made to order." }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuGrid = document.getElementById('menu-grid');
+            const searchInput = document.getElementById('menu-search');
+            const tabButtons = document.querySelectorAll('.menu-tab-btn');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const bookingForm = document.getElementById('booking-form');
+
+            // Render Menu Items
+            function renderMenu(filterCategory = 'all', searchQuery = '') {
+                menuGrid.innerHTML = '';
+                
+                const filtered = menuItems.filter(item => {
+                    const matchesCategory = filterCategory === 'all' || item.category === filterCategory;
+                    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                          item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+                    return matchesCategory && matchesSearch;
+                });
+
+                if (filtered.length === 0) {
+                    menuGrid.innerHTML = `
+                        <div class="col-span-full text-center py-12 text-gray-400">
+                            <i class="fa-solid fa-utensils text-4xl mb-3 text-gold-400/50"></i>
+                            <p>No dishes found matching your search.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                filtered.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = "bg-charcoal-800 rounded-2xl p-6 border border-gray-700/60 hover:border-gold-400/50 transition-all flex flex-col justify-between";
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-start justify-between gap-2 mb-2">
+                                <h3 class="font-serif font-bold text-white text-lg">${item.name}</h3>
+                                <span class="text-gold-400 font-bold text-base shrink-0">${item.price}</span>
+                            </div>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">${item.desc}</p>
+                        </div>
+                        ${item.tag ? `<span class="inline-block w-fit bg-gold-400/20 text-gold-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">${item.tag}</span>` : ''}
+                    `;
+                    menuGrid.appendChild(card);
+                });
+            }
+
+            // Tab Click Event
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabButtons.forEach(b => {
+                        b.classList.remove('bg-gold-400', 'text-charcoal-950', 'active');
+                        b.classList.add('bg-charcoal-800', 'text-gray-300');
+                    });
+                    btn.classList.remove('bg-charcoal-800', 'text-gray-300');
+                    btn.classList.add('bg-gold-400', 'text-charcoal-950', 'active');
+
+                    renderMenu(btn.dataset.category, searchInput.value);
+                });
+            });
+
+            // Search Event Listener
+            searchInput.addEventListener('input', (e) => {
+                const activeTab = document.querySelector('.menu-tab-btn.active')?.dataset.category || 'all';
+                renderMenu(activeTab, e.target.value);
+            });
+
+            // Mobile Menu Toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // Booking Form Handler
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('book-name').value;
+                const phone = document.getElementById('book-phone').value;
+                const type = document.getElementById('book-type').value;
+                const date = document.getElementById('book-date').value;
+                const count = document.getElementById('book-count').value;
+                const notes = document.getElementById('book-notes').value;
+
+                const text = `Hello Hotel Annamalai Residency,%0A%0AI would like to make an inquiry:%0A- Name: ${encodeURIComponent(name)}%0A- Phone: ${encodeURIComponent(phone)}%0A- Type: ${encodeURIComponent(type)}%0A- Date: ${encodeURIComponent(date)}%0A- Count/Rooms: ${encodeURIComponent(count)}%0A- Notes: ${encodeURIComponent(notes)}`;
+                window.open(`https://wa.me/919443441161?text=${text}`, '_blank');
+            });
+
+            // Set default date picker to today
+            document.getElementById('book-date').valueAsDate = new Date();
+
+            // Initial Render
+            renderMenu();
+        });
+    </script>
+</body>
+</html>
